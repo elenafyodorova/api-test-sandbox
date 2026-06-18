@@ -10,7 +10,7 @@ services:
     volumes:
       - ./app/init.sql:/docker-entrypoint-initdb.d/init.sql
     ports:
-      - "5434:5432"   # 5434 — чтобы не конфликтовать с etrn-postgres (5433) и tcms (5432)
+      - "5434:5432"   # 5434 — чтобы не конфликтовать с другими БД
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U qa_user -d logistics"]
       interval: 5s
