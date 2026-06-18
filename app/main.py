@@ -15,7 +15,7 @@ DATABASE_URL = os.getenv(
 app = FastAPI(
     title="Smart Logistics Orders API",
     version="2.0.0",
-    description="Тестовый стенд для практики Postman — контроллер /api/v2/orders"
+    description="Тестовый стенд для CRUD операций — контроллер /api/v2/orders"
 )
 
 pool = None
